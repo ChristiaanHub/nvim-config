@@ -110,6 +110,7 @@ require('lazy').setup({
   require 'kickstart.plugins.mini', -- Collection of various small independent plugins/modules
   require 'kickstart.plugins.tree-sitter', -- Treesitter
   require 'custom.plugins.onedark', -- Use `:Telescope colorscheme` to see installed schemes.
+  require 'custom.plugins.scrollbar', -- Use `:Telescope colorscheme` to see installed schemes.
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
