@@ -38,7 +38,7 @@ return { --
             highlight = 'Search',
           },
           Error = {
-            text = { '-', '=' },
+            text = { '-', 'x' },
             priority = 2,
             gui = nil,
             color = nil,
@@ -47,7 +47,7 @@ return { --
             highlight = 'DiagnosticVirtualTextError',
           },
           Warn = {
-            text = { '-', '=' },
+            text = { '-', 'x' },
             priority = 3,
             gui = nil,
             color = nil,

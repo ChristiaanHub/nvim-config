@@ -59,3 +59,8 @@ vim.opt.inccommand = 'split'
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Show diagnostics as you type
+local current_config = vim.diagnostic.config()
+current_config.update_in_insert = true
+vim.diagnostic.config(current_config)
