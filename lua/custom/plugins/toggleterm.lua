@@ -41,8 +41,8 @@ return {
         direction = 'float',
         float_opts = {
           border = 'double',
-          width = 120,
           height = 40,
+          width = 180,
         },
         -- function to run on opening the terminal
         on_open = function(term)
