@@ -7,7 +7,7 @@ return {
         size = 20, -- default size of the terminal
         open_mapping = [[<c-\>]], -- default key mapping to toggle the terminal
         shade_filetypes = {},
-        shade_terminals = false,
+        shade_terminals = true,
         shading_factor = '1', -- the degree by which to darken the terminal background
         start_in_insert = true,
         insert_mappings = true,
@@ -35,14 +35,13 @@ return {
       local Terminal = require('toggleterm.terminal').Terminal
 
       local lazygit = Terminal:new {
-        size = 20, -- default size of the terminal
         cmd = 'lazygit',
         dir = 'git_dir',
         direction = 'float',
         float_opts = {
           border = 'double',
-          height = 40,
-          width = 180,
+          height = 45,
+          width = 200,
         },
         -- function to run on opening the terminal
         on_open = function(term)
