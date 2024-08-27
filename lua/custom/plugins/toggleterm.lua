@@ -55,11 +55,11 @@ return {
         end,
       }
 
-      function _lazygit_toggle()
+      function Lazygit_Toggle()
         lazygit:toggle()
       end
 
-      vim.keymap.set('n', '<leader>lg', '<cmd>lua _lazygit_toggle()<CR>', { noremap = true, silent = true, desc = 'Open [L]azy[G]it terminal' })
+      vim.keymap.set('n', '<leader>lg', '<cmd>lua Lazygit_Toggle()<CR>', { noremap = true, silent = true, desc = 'Open [L]azy[G]it terminal' })
     end,
   },
 }
