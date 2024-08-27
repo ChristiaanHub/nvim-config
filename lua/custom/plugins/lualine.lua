@@ -1,3 +1,11 @@
+local function get_terminal_number()
+  local bufnr = vim.api.nvim_get_current_buf()
+  if vim.bo[bufnr].buftype == 'terminal' then
+    return 'Term ' .. bufnr
+  end
+  return ''
+end
+
 return {
   {
     'nvim-lualine/lualine.nvim',
@@ -26,7 +34,7 @@ return {
           lualine_a = { 'mode' },
           lualine_b = { 'branch', 'diff', 'diagnostics' },
           lualine_c = { 'filename' },
-          lualine_x = { 'encoding', 'fileformat', 'filetype' },
+          lualine_x = { get_terminal_number, 'encoding', 'fileformat', 'filetype' },
           lualine_y = { 'progress' },
           lualine_z = { 'location' },
         },
