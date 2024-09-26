@@ -26,3 +26,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Open the file explorrer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Move line up and down
+vim.keymap.set('x', '<A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selected one line down', noremap = true, silent = true })
+vim.keymap.set('x', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selected one line up', noremap = true, silent = true })
+
+-- Usefull code snipets.
+vim.keymap.set('v', '<leader>l', 'y<esc>oconsole.log("<c-r>0: ", <c-r>0);<esc>', { desc = '[L]og selected', silent = true })
+vim.keymap.set('n', '<leader>sue', 'ouseEffect(() => {<CR>}, []);<Esc>O', { desc = '[S]nippet useEffect', silent = true })
